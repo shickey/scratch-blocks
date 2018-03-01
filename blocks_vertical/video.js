@@ -71,3 +71,22 @@
     });
   }
 };
+
+ Blockly.Blocks['video_start'] = {
+  /**
+   * Block to play video until done.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": "start video %1",
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "VIDEO_MENU"
+        }
+      ],
+      "extensions": ["colours_more", "shape_statement"]
+    });
+  }
+};
