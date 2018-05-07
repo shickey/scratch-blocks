@@ -90,3 +90,110 @@
     });
   }
 };
+
+Blockly.Blocks['video_rotaterightby'] = {
+  /**
+   * Block to glide for a specified time.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": "rotate %1 %2 degrees",
+      "args0": [
+        {
+          "type": "field_image",
+          "src": Blockly.mainWorkspace.options.pathToMedia + "rotate-right.svg",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "type": "input_value",
+          "name": "DEGREES"
+        }
+      ],
+      "extensions": ["colours_more", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['video_rotateleftby'] = {
+  /**
+   * Block to glide for a specified time.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": "rotate %1 %2 degrees",
+      "args0": [
+        {
+          "type": "field_image",
+          "src": Blockly.mainWorkspace.options.pathToMedia + "rotate-left.svg",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "type": "input_value",
+          "name": "DEGREES"
+        }
+      ],
+      "extensions": ["colours_more", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['video_setrotation'] = {
+  /**
+   * Block to glide for a specified time.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": "set rotation to %1 degrees",
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "DEGREES"
+        }
+      ],
+      "extensions": ["colours_more", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['video_changesizeby'] = {
+  /**
+   * Block to glide for a specified time.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": "change size by %1",
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "PERCENTAGE"
+        }
+      ],
+      "extensions": ["colours_more", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['video_setsize'] = {
+  /**
+   * Block to glide for a specified time.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": "set size to %1%%",
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "PERCENTAGE"
+        }
+      ],
+      "extensions": ["colours_more", "shape_statement"]
+    });
+  }
+};
