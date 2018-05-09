@@ -18,7 +18,7 @@
  * limitations under the License.
  */
 
- Blockly.Blocks['video_videos_menu'] = {
+Blockly.Blocks['video_videos_menu'] = {
   /**
    * Videos drop-down menu.
    * @this Blockly.Block
@@ -193,6 +193,94 @@ Blockly.Blocks['video_setsize'] = {
           "name": "PERCENTAGE"
         }
       ],
+      "extensions": ["colours_more", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['video_effect_menu_options'] = {
+  /**
+   * Videos drop-down menu.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit(
+      {
+        "message0": "%1",
+        "args0": [
+          {
+            "type": "field_dropdown",
+            "name": "VIDEO_EFFECT_MENU",
+            "options": [
+              ['color', 'COLOR'],
+              ['whirl', 'WHIRL'],
+              ['crystallize', 'CRYSTALLIZE'],
+              ['kaleidoscope', 'KALEIDOSCOPE']
+            ]
+          }
+        ],
+        "colour": Blockly.Colours.more.secondary,
+        "colourSecondary": Blockly.Colours.more.secondary,
+        "colourTertiary": Blockly.Colours.more.tertiary,
+        "extensions": ["output_string"]
+      });
+  }
+};
+
+Blockly.Blocks['video_changeeffectby'] = {
+  /**
+   * Block to change graphic effect.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": "change %1 effect by %2",
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "EFFECT"
+        },
+        {
+          "type": "input_value",
+          "name": "CHANGE"
+        }
+      ],
+      "extensions": ["colours_more", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['video_seteffectto'] = {
+  /**
+   * Block to set graphic effect.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": "set %1 effect to %2",
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "EFFECT"
+        },
+        {
+          "type": "input_value",
+          "name": "VALUE"
+        }
+      ],
+      "extensions": ["colours_more", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['video_clearvideoeffects'] = {
+  /**
+   * Block to clear graphic effects.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": "clear video effects",
       "extensions": ["colours_more", "shape_statement"]
     });
   }
