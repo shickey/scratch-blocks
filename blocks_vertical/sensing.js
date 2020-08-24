@@ -28,6 +28,26 @@ goog.require('Blockly.constants');
 goog.require('Blockly.ScratchBlocks.VerticalExtensions');
 
 
+Blockly.Blocks['sensing_whentouchingobject'] = {
+  /**
+   * Hat block to Report if its touching a Object.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": 'when touching %1',
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "TOUCHINGOBJECTMENU"
+        }
+      ],
+      "category": Blockly.Categories.sensing,
+      "extensions": ["colours_sensing", "shape_hat"]
+    });
+  }
+};
+
 Blockly.Blocks['sensing_touchingobject'] = {
   /**
    * Block to Report if its touching a Object.
@@ -61,8 +81,9 @@ Blockly.Blocks['sensing_touchingobjectmenu'] = {
           "type": "field_dropdown",
           "name": "TOUCHINGOBJECTMENU",
           "options": [
-            [Blockly.Msg.SENSING_TOUCHINGOBJECT_POINTER, '_mouse_'],
-            [Blockly.Msg.SENSING_TOUCHINGOBJECT_EDGE, '_edge_']
+              ['any sprite', '_any_']
+            // [Blockly.Msg.SENSING_TOUCHINGOBJECT_POINTER, '_mouse_'],
+            // [Blockly.Msg.SENSING_TOUCHINGOBJECT_EDGE, '_edge_']
           ]
         }
       ],
